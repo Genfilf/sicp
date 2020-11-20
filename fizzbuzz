@@ -1,0 +1,11 @@
+#lang racket
+; Fizz Buzz
+
+(define (check i)
+  (cond
+    [(integer? (/ i 3)) (display "fizz ")]
+    [(integer? (/ i 5)) (display "buzz ")]
+    [else (and (display i) (display " "))]))
+
+(for ([i (in-range 1 101)])
+      (check i))
